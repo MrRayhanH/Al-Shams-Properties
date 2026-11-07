@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al Shams Properties | Premium Real Estate in UAE</title>
+    
+    <!-- Google Fonts: Playfair Display for elegant headings, Inter for clean body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A192F',
+                        gold: {
+                            DEFAULT: '#D4AF37',
+                            hover: '#C5A028',
+                            light: '#F9F6E8'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth scrolling for anchor links */
+        html { scroll-behavior: smooth; }
+        
+        /* Custom styling for the hero background to ensure dark overlay */
+        .hero-bg {
+            background-image: linear-gradient(rgba(10, 25, 47, 0.7), rgba(10, 25, 47, 0.6)), url('https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=1920&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 antialiased selection:bg-gold selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-navy/95 backdrop-blur-sm shadow-md transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <span class="font-serif text-2xl md:text-3xl font-bold text-gold tracking-wide">
+                        <i class="fa-solid fa-building-user mr-2 text-gold"></i>
+                        Al Shams Properties
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-white hover:text-gold transition-colors font-medium">Home</a>
+                    <a href="#featured" class="text-white hover:text-gold transition-colors font-medium">Buy</a>
+                    <a href="#featured" class="text-white hover:text-gold transition-colors font-medium">Off-Plan</a>
+                    <a href="#contact" class="px-5 py-2.5 bg-gold hover:bg-gold-hover text-navy font-semibold rounded-lg transition-colors shadow-lg">Contact Us</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-gold focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-white hover:text-gold font-medium">Home</a>
+                <a href="#featured" class="block px-3 py-2 text-white hover:text-gold font-medium">Buy</a>
+                <a href="#featured" class="block px-3 py-2 text-white hover:text-gold font-medium">Off-Plan</a>
+                <a href="#contact" class="block px-3 py-2 text-gold font-bold">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg relative min-h-screen flex items-center justify-center pt-20">
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 w-full max-w-5xl mx-auto">
+            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
+                Welcome Home to the <span class="text-gold">UAE</span>
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-3xl mx-auto font-light leading-relaxed drop-shadow-md mb-12">
+                Our sensitivity to the marketplace comes from a single yet powerful perspective: UAE is more than just a market, it’s our home. <span class="text-2xl">🏡</span>
+            </p>
+
+            <!-- Search Bar Overlay -->
+            <div class="bg-white p-4 md:p-6 rounded-2xl shadow-2xl max-w-4xl mx-auto animate-fade-in-up">
+                <form class="flex flex-col md:flex-row gap-4" onsubmit="event.preventDefault();">
+                    <div class="flex-1 relative">
+                        <i class="fa-solid fa-location-dot absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" placeholder="Location (e.g. Dubai Marina)" class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all">
+                    </div>
+                    <div class="flex-1 relative">
+                        <i class="fa-solid fa-home absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <select class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent appearance-none transition-all">
+                            <option value="">Property Type</option>
+                            <option value="villa">Villa</option>
+                            <option value="apartment">Apartment</option>
+                            <option value="townhouse">Townhouse</option>
+                            <option value="penthouse">Penthouse</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 relative">
+                        <i class="fa-solid fa-tag absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                        <select class="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent appearance-none transition-all">
+                            <option value="">Max Price</option>
+                            <option value="1m">AED 1,000,000</option>
+                            <option value="3m">AED 3,000,000</option>
+                            <option value="5m">AED 5,000,000</option>
+                            <option value="10m+">AED 10,000,000+</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="bg-gold hover:bg-gold-hover text-navy font-bold py-3 px-8 rounded-xl transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-search"></i> Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <!-- Featured Properties Section -->
+    <section id="featured" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-navy mb-4">Featured Luxury Listings</h2>
+                <div class="w-24 h-1 bg-gold mx-auto rounded-full mb-4"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto text-lg">Discover our hand-picked selection of premium properties across the most sought-after locations in the UAE.</p>
+            </div>
+
+            <!-- Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Property Card 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full z-10">FOR SALE</div>
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=800&auto=format&fit=crop" alt="Luxury Villa" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-gold mb-2">AED 12,500,000</h3>
+                        <h4 class="font-serif text-xl font-semibold text-navy mb-1">Signature Villa, Palm Jumeirah</h4>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-1"></i> Palm Jumeirah, Dubai</p>
+                        
+                        <div class="flex justify-between items-center py-4 border-t border-b border-gray-100 mb-4">
+                            <div class="flex items-center text-gray-600" title="Bedrooms">
+                                <i class="fa-solid fa-bed mr-2 text-gold"></i> <span>5</span>
+                            </div>
+                            <div class="flex items-center text-gray-600" title="Bathrooms">
+                                <i class="fa-solid fa-bath mr-2 text-gold"></i> <span>6</span>
+                            </div>
+                            <div class="flex items-center text-gray-600" title="Square Feet">
+                                <i class="fa-solid fa-vector-square mr-2 text-gold"></i> <span>7,200 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full py-3 border-2 border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 bg-gold text-navy text-xs font-bold px-3 py-1 rounded-full z-10">OFF-PLAN</div>
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop" alt="Premium Apartment" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-gold mb-2">AED 4,800,000</h3>
+                        <h4 class="font-serif text-xl font-semibold text-navy mb-1">Burj Crown Penthouse</h4>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-1"></i> Downtown Dubai, Dubai</p>
+                        
+                        <div class="flex justify-between items-center py-4 border-t border-b border-gray-100 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-bed mr-2 text-gold"></i> <span>3</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-bath mr-2 text-gold"></i> <span>4</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-vector-square mr-2 text-gold"></i> <span>3,100 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full py-3 border-2 border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Property Card 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group">
+                    <div class="relative h-64 overflow-hidden">
+                        <div class="absolute top-4 left-4 bg-navy text-white text-xs font-bold px-3 py-1 rounded-full z-10">FOR SALE</div>
+                        <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800&auto=format&fit=crop" alt="Modern Townhouse" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-bold text-2xl text-gold mb-2">AED 3,200,000</h3>
+                        <h4 class="font-serif text-xl font-semibold text-navy mb-1">Contemporary Townhouse</h4>
+                        <p class="text-gray-500 text-sm mb-4"><i class="fa-solid fa-location-dot mr-1"></i> Dubai Hills Estate, Dubai</p>
+                        
+                        <div class="flex justify-between items-center py-4 border-t border-b border-gray-100 mb-4">
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-bed mr-2 text-gold"></i> <span>4</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-bath mr-2 text-gold"></i> <span>5</span>
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i class="fa-solid fa-vector-square mr-2 text-gold"></i> <span>2,850 sqft</span>
+                            </div>
+                        </div>
+                        
+                        <button class="w-full py-3 border-2 border-navy text-navy font-semibold rounded-xl hover:bg-navy hover:text-white transition-colors">
+                            View Details
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="text-navy font-semibold border-b-2 border-gold pb-1 hover:text-gold transition-colors inline-flex items-center gap-2">
+                    View All Properties <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us / Banner -->
+    <section class="bg-navy py-16 text-center px-4">
+        <div class="max-w-4xl mx-auto">
+            <i class="fa-solid fa-gem text-4xl text-gold mb-6"></i>
+            <h2 class="font-serif text-3xl md:text-4xl text-white font-bold mb-6">Your Trusted Real Estate Partner in the UAE</h2>
+            <p class="text-gray-300 text-lg md:text-xl font-light">With years of local expertise and a deep understanding of the market, we ensure your journey to finding the perfect property is seamless, transparent, and rewarding.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-navy border-t border-gray-800 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                
+                <!-- Brand Info -->
+                <div>
+                    <div class="font-serif text-2xl font-bold text-gold mb-6">
+                        <i class="fa-solid fa-building-user mr-2 text-gold"></i>
+                        Al Shams Properties
+                    </div>
+                    <p class="text-gray-400 mb-6 leading-relaxed">
+                        UAE is more than just a market, it’s our home. Let us help you find yours. 🏡
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gold hover:text-white transition-colors">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gold hover:text-white transition-colors">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gold hover:text-white transition-colors">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="#featured" class="text-gray-400 hover:text-gold transition-colors">Properties for Sale</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">Properties for Rent</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">Off-Plan Projects</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-gold transition-colors">About Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-white font-semibold text-lg mb-6">Contact Us</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-gold mt-1 mr-3"></i>
+                            <span class="text-gray-400">Business Bay, Dubai, United Arab Emirates</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-phone text-gold mr-3"></i>
+                            <a href="tel:+971561883004" class="text-gray-400 hover:text-gold transition-colors">+971 56 188 3004</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa-solid fa-envelope text-gold mr-3"></i>
+                            <a href="mailto:alshamsproperties.dxb@gmail.com" class="text-gray-400 hover:text-gold transition-colors">alshamsproperties.dxb@gmail.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2026 Al Shams Properties. All rights reserved. Designed with <i class="fa-solid fa-heart text-gold mx-1"></i> in the UAE.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/971561883004" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 transition-transform duration-300 group">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+        <!-- Tooltip -->
+        <span class="absolute right-16 bg-white text-gray-800 text-sm font-semibold py-1 px-3 rounded shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+            Chat with us!
+        </span>
+    </a>
+
+    <!-- Basic Interaction Script -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Add subtle background to navbar on scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
